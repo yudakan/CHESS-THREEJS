@@ -1,0 +1,138 @@
+:root {
+  --color0: #f4eeff;
+  --color1: #dcd6f7;
+  --color2: #a6b1e1;
+  --color3: #424874;
+  --color4: #f688bb;
+  --color5: #f35588;
+  --color6: #fff591;
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+h1, h2, h3, span {
+  color: var(--color0);
+}
+
+input, select {
+  border: none;
+  padding: 5px 5px;
+  font-size: 16px;
+  outline: 0;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+}
+
+select {
+  width: 150px;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  background-color: var(--color5);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.button>span {
+  font-size: 24px;
+}
+
+.button:hover {
+  background-color: var(--color4);
+  transform: scale(1.1);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.centerBlock {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* --- GAME --- */
+
+#game {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color3);
+  z-index: 1;
+}
+
+#game>.row {
+  height: 100%;
+}
+
+#game-container {
+  width: 100%;
+  height: 100%;
+}
+
+#inspector {
+  width: 400px;
+  height: 100%;
+  background-color: var(--color3);
+}
+
+/* --- MENU --- */
+
+#menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color3);
+  z-index: 10;
+}
+
+#menu>.centerBlock {
+  padding: 75px 100px;
+  border: 20px solid var(--color6);
+}
+
+#menu h1 {
+  font-size: 64px;
+  margin: 25px 50px;
+}
+
+#menu h1 span {
+  font-size: 32px;
+  color: var(--color1);
+}
+
+#menu .row {
+  margin-bottom: 20px;
+}
+
+#play_button {
+  margin-top: 40px;
+}

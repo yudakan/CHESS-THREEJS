@@ -1,0 +1,81 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="yka">
+  <title>Chess</title>
+
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+</head>
+
+<body>
+  <div id="menu">
+    <div class="centerBlock">
+
+      <h1>ESCACS <span>by yka owo</span></h1>
+
+      <div class="row">
+        <input id="player0_name" type="text" placeholder="Player Name" autofocus />
+        <select id="player0_color">
+          <option value="black" selected>Black</option>
+          <option value="white">White</option>
+        </select>
+      </div>
+      <div class="row">
+        <input id="player1_name" type="text" placeholder="Player Name" />
+        <select id="player1_color">
+          <option value="black">Black</option>
+          <option value="white" selected>White</option>
+        </select>
+      </div>
+
+      <input id="time_input" type="number" placeholder="Time in minutes" />
+
+      <div id="play_button" class="button"><span>Play!</span></div>
+
+    </div>
+  </div>
+
+  <div id="game">
+    <div class="row">
+      <div id="game-container"></div>
+      <div id="inspector">
+
+        <h1>ESCACS <span>by yka owo</span></h1>
+
+        <div class="row">
+          <div id="player0">
+            <h2></h2>
+            <h3></h3>
+            <div id="surrender_p0_button" class="button surrende-btn">Surrender</div>
+          </div>
+          <div id="player1">
+            <h2></h2>
+            <h3></h3>
+            <div id="surrender_p1_button" class="button surrende-btn">Surrender</div>
+          </div>
+        </div>
+
+        <div id="history"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/three/three.js"></script>
+  <script src="js/three/OrbitControls.js"></script>
+  <script src="js/three/GLTFLoader.js"></script>
+
+  <script src="js/escacs/logic/Position.js"></script>
+  <script src="js/escacs/logic/Piece.js"></script>
+  <script src="js/escacs/logic/Player.js"></script>
+  <script src="js/escacs/logic/GameLogic.js"></script>
+  <script src="js/escacs/DataStructures.js"></script>
+  <script src="js/escacs/Piece3D.js"></script>
+  <script src="js/escacs/Escacs.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
